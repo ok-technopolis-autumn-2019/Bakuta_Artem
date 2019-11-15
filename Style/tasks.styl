@@ -1,0 +1,92 @@
+@require "vars.styl"
+
+.todo-app__tasks
+  min-height: 296px
+
+  &:empty
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &::before
+      content: ""
+      font-size: font-size_XL
+
+
+.task-list__element
+  box-sizing: border-box
+  border-bottom: 1px #E6E6E6 solid
+  display: flex
+  flex-grow: 1
+  align-items: center
+  min-height: 59px
+  overflow: hidden
+
+  &:hover
+    background-color: #FAFAFA
+
+
+.task-element
+  &__delete
+    flex-shrink: 0
+    width: 36px
+    height: 36px
+    margin: -99999px 4px 0 12px
+    text-indent: -99999px
+    background-image: url("./images/delete.svg")
+    background-repeat: no-repeat
+    background-position: 50%
+
+    &:focus, .task-list__element:hover &
+      margin-top: 0
+
+  &__text
+    display: flex
+    flex-grow: 1
+    min-width: 0
+    padding: 12px 0
+    word-break: break-word
+    font-size: 24px
+
+  &__status-icon
+    flex-shrink: 0
+    width: 36px
+    height: 36px
+    box-sizing: border-box
+    margin: 0 12px 0 15px
+    border: 1px solid #e6e6e6
+    border-radius: 50%
+    background-color: #fff
+
+  &__status
+    flex-shrink: 0
+    width: 30px
+    height: 30px
+    position: absolute
+    left: -9999px
+
+    &:checked + .task-element__status-icon
+      background-image: url('./images/completed.svg')
+      background-position: 6px 8px
+      background-repeat: no-repeat
+      background-size: auto
+      border-color: #5DC2AF
+
+    &:checked ~ .task-element__text
+      text-decoration: line-through
+
+    &:focus ~ .task-element__status-icon
+      border-color: #5DC2AF
+
+    &:hover .checkbox:not(:checked) + .task-element__status-icon
+      border-color: #CCCCCC
+
+
+.task-editor
+  padding-left: 56px
+
+  &__input
+    height: 59px
+    width: 100%
+    box-sizing: border-box
+    font-size: 24px
