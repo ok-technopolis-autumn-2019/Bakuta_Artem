@@ -119,7 +119,7 @@ body:after {
   border-color: #5dc2af;
 }
 .task-element__status:hover .checkbox:not(:checked) + .task-element__status-icon {
-  border-color: #ccc;
+  border-color: #bfbfbf;
 }
 .task-editor {
   padding-left: 56px;

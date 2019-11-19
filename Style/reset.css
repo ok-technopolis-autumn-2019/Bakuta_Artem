@@ -1,36 +1,41 @@
 html,
-body{
+body {
     margin: 0;
     padding: 0;
 }
-    body{
+
+    body {
         background-color: #f2f2f2;
         font-family: 'Roboto', 'Arial', sans-serif;
         color: #666;
     }
-    h1{
+
+    h1 {
         margin: 0;
         font-weight: 400;
     }
-    ul{
+
+    ul {
         margin: 0;
         padding: 0;
         list-style: none;
     }
 
-    input[type = "text"]{
+
+    input[type = "text"] {
         border: 0 none;
         padding-left: 4px;
         padding-right: 4px;
         background-color: transparent;
         font-family: 'Roboto', 'Arial', sans-serif;
         }
+
         input[type = "text"]::placeholder{
             color: #CCCCCC;
             font-style: italic;
         }
 
-    button{
+    button { 
         border: 0 none;
         background-color: transparent;
 
